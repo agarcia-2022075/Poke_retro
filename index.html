@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Retro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        
+        <div id="screen-start" class="screen active">
+            <h1>Pokémon Retro</h1>
+            <button id="btn-start">Presiona Start</button>
+            <div class="footer-credits">
+                <p>André Paolo García Valdéz</p>
+                <p>Carné: 2022075 | 5to Informatica A</p>
+                <p>Colegio Fundación Kinal</p>
+            </div>
+        </div>
+
+        <div id="screen-selection" class="screen hidden">
+            <h2>Elige a tu equipo</h2>
+            <div id="pokemon-pool"></div>
+            <button id="btn-confirm-team">Confirmar Equipo</button>
+        </div>
+
+        <div id="screen-trainer-select" class="screen hidden">
+            <h2>Elige a tu Rival</h2>
+            <div id="trainer-pool"></div>
+        </div>
+
+        <div id="screen-battle" class="screen hidden">
+            <!-- RIVAL ARRIBA -->
+            <div class="rival-zone">
+                <div class="stats-box">
+                    <span id="rival-name">RIVAL</span>
+                    <div class="hp-bar-container">
+                        <div id="rival-hp-bar" class="hp-bar"></div>
+                    </div>
+                    <span id="rival-hp-text" class="hp-text"></span>
+                </div>
+                <div class="sprite-box">
+                    <img id="rival-sprite" src="" alt="Rival">
+                </div>
+            </div>
+
+            <!-- JUGADOR ABAJO -->
+            <div class="player-zone">
+                <div class="sprite-box">
+                    <img id="player-sprite" src="" alt="Jugador">
+                </div>
+                <div class="stats-box">
+                    <span id="player-name">JUGADOR</span>
+                    <div class="hp-bar-container">
+                        <div id="player-hp-bar" class="hp-bar"></div>
+                    </div>
+                    <span id="player-hp-text" class="hp-text"></span>
+                </div>
+            </div>
+
+            <div class="action-box">
+                <p id="battle-text">¡Un rival salvaje apareció!</p>
+                
+                <div id="attack-menu" class="hidden">
+                    <button id="atk-1">Ataque 1</button>
+                    <button id="atk-2">Ataque 2</button>
+                    <button id="atk-3">Ataque 3</button>
+                    <button id="atk-4">Ataque 4</button>
+                    <button id="btn-back">Volver</button>
+                </div>
+
+                <div id="switch-menu" class="hidden">
+                    <button id="switch-1"></button>
+                    <button id="switch-2"></button>
+                    <button id="switch-3"></button>
+                    <button id="btn-cancel-switch">Volver</button>
+                </div>
+                
+                <div id="action-menu">
+                    <button id="btn-fight">Luchar</button>
+                    <button id="btn-pokemon">Pokémon</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="screen-result" class="screen hidden">
+            <h2 id="result-title">Fin del Juego</h2>
+            <p id="result-stats">Entrenadores vencidos 0</p>
+            <button id="btn-next-trainer" class="hidden">Elegir otro rival</button>
+            <button id="btn-restart">Volver a Jugar</button>
+        </div>
+        
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/battle.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

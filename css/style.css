@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#game-container {
+    width: 500px;
+    height: 500px;
+    background-color: #9bbc0f;
+    border: 6px solid #0f380f;
+    border-radius: 10px;
+    padding: 15px;
+    color: #0f380f;
+    position: relative;
+    overflow: hidden;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.active {
+    display: flex;
+}
+
+/* Pantallas Inicio y Fin */
+#screen-start, #screen-result, #screen-selection, #screen-trainer-select {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-credits {
+    position: absolute;
+    bottom: 20px;
+    font-size: 8px;
+    line-height: 1.6;
+    color: #0f380f;
+    opacity: 0.8;
+}
+
+h1, h2 {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+button {
+    background-color: #8bac0f;
+    color: #0f380f;
+    border: 4px solid #0f380f;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #306230;
+    color: #9bbc0f;
+}
+
+/* Pantalla Batalla - Rediseño Gen 1 */
+.rival-zone {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.rival-zone .sprite-box {
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    width: 140px;
+    height: 140px;
+}
+
+.player-zone {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 60px;
+}
+
+.player-zone .sprite-box {
+    position: absolute;
+    left: 20px;
+    bottom: 165px;
+    width: 160px;
+    height: 160px;
+}
+
+.stats-box {
+    background-color: #9bbc0f;
+    border-bottom: 4px solid #0f380f;
+    border-right: 8px solid #0f380f;
+    border-top: 2px solid #0f380f;
+    border-left: 2px solid #0f380f;
+    padding: 10px;
+    width: 220px;
+    font-size: 12px;
+    border-radius: 0 0 15px 0;
+    z-index: 10;
+}
+
+.player-zone .stats-box {
+    border-radius: 15px 0 0 0;
+    border-right: 2px solid #0f380f;
+    border-left: 8px solid #0f380f;
+    margin-right: 40px; /* Reducido de un valor implícito para acercarlo al centro */
+}
+
+.hp-bar-container {
+    width: 140px; /* Ancho fijo para evitar que se salga de la caja de 220px */
+    height: 8px;
+    background-color: #9bbc0f;
+    border: 2px solid #0f380f;
+    margin-top: 20px; /* Aumentado de 12px a 20px para bajar la barra */
+    position: relative;
+    margin-left: 35px; /* Espacio para el texto HP: */
+}
+
+.hp-bar-container::before {
+    content: "HP:";
+    font-size: 10px;
+    position: absolute;
+    left: -32px;
+    top: -4px;
+    font-weight: bold;
+}
+
+.hp-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #0f380f;
+    transition: width 0.3s ease;
+}
+
+.hp-text {
+    font-size: 9px;
+    float: right;
+    margin-top: 4px;
+}
+
+.sprite-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    image-rendering: pixelated;
+}
+
+/* Caja de texto y menú */
+.action-box {
+    border: 4px solid #0f380f;
+    background-color: #8bac0f;
+    height: 150px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    padding: 12px;
+    font-size: 10px;
+    border-radius: 5px;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+#battle-text {
+    margin: 0 0 10px 0;
+    min-height: 25px;
+}
+
+#action-menu, #attack-menu, #switch-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+#action-menu button, #attack-menu button, #switch-menu button {
+    width: 48%;
+    margin-top: 0;
+    padding: 6px;
+    font-size: 8px;
+}
+
+#btn-back, #btn-cancel-switch {
+    width: 100% !important;
+    margin-top: 5px !important;
+}
+
+#pokemon-pool {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.poke-card {
+    border: 2px solid #0f380f;
+    padding: 6px 4px;
+    cursor: pointer;
+    width: 30%;
+    font-size: 7px;
+    text-align: center;
+    background-color: #8bac0f;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.poke-card img {
+    width: 40px;
+    height: 40px;
+    mix-blend-mode: multiply;
+    image-rendering: pixelated;
+}
+
+.poke-card span {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.poke-card.selected {
+    background-color: #306230;
+    color: #9bbc0f;
+}
+
+#trainer-pool {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.trainer-card {
+    border: 2px solid #0f380f;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 8px;
+    text-align: left;
+    background-color: #8bac0f;
+}
+
+.trainer-card:hover {
+    background-color: #306230;
+    color: #9bbc0f;
+}
+
+.difficulty {
+    float: right;
+    font-weight: bold;
+}
