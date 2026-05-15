@@ -45,8 +45,9 @@ Este proyecto es un simulador de combates Pokémon por turnos, inspirado fielmen
 | ![Haunter](https://img.pokemondb.net/sprites/red-blue/normal/haunter.png) | Fantasma | 95 | Lengüetazo, Puño Sombra, Tinieblas, Rencor |
 | ![Graveler](https://img.pokemondb.net/sprites/red-blue/normal/graveler.png) | Roca / Tierra | 35 | Lanzarrocas, Terremoto, Magnitud, Fortaleza |
 | ![Machoke](https://img.pokemondb.net/sprites/red-blue/normal/machoke.png) | Lucha | 45 | Golpe Karate, Sumisión, Patada Baja, Corpulencia |
-| ![Snorlax](https://img.pokemondb.net/sprites/red-blue/normal/snorlax.png) | Normal | 30 | Golpe Cuerpo, Hiperrayo, Fuerza, Amnesia |
-| ![Lapras](https://img.pokemondb.net/sprites/red-blue/normal/lapras.png) | Agua / Hielo | 60 | Rayo Hielo, Ventisca, Surf, Hidropulso |
+| ![Snorlax](https://img.pokemondb.net/sprites/red-blue/normal/snorlax.png) | Normal | 30 | Golpe Cuerpo, Hiperrayo, Fuerza, Amnesia | Muralla de HP. |
+| ![Lapras](https://img.pokemondb.net/sprites/red-blue/normal/lapras.png) | Agua / Hielo | 60 | Rayo Hielo, Ventisca, Surf, Hidropulso | Versátil y potente. |
+| ![Solgaleo](https://img.pokemondb.net/sprites/sun-moon/normal/solgaleo.png) | Psíquico / Acero | 97 | Meteoimpacto, Psíquico, Cabezazo Zen, Defensa Férrea | Legendario devastador. |
 
 ---
 

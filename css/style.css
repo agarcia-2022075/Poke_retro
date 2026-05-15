@@ -126,17 +126,17 @@ button:hover {
     border-radius: 15px 0 0 0;
     border-right: 2px solid #0f380f;
     border-left: 8px solid #0f380f;
-    margin-right: 40px; /* Reducido de un valor implícito para acercarlo al centro */
+    margin-right: 40px;
 }
 
 .hp-bar-container {
-    width: 140px; /* Ancho fijo para evitar que se salga de la caja de 220px */
+    width: 140px;
     height: 8px;
     background-color: #9bbc0f;
     border: 2px solid #0f380f;
-    margin-top: 20px; /* Aumentado de 12px a 20px para bajar la barra */
+    margin-top: 20px; 
     position: relative;
-    margin-left: 35px; /* Espacio para el texto HP: */
+    margin-left: 35px; 
 }
 
 .hp-bar-container::before {

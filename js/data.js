@@ -108,6 +108,17 @@ const playerPokemon = [
             { name: 'Surf', type: 'Agua', category: 'Ataque', power: 90, accuracy: 100 },
             { name: 'Hidropulso', type: 'Agua', category: 'Ataque', power: 60, accuracy: 100 }
         ]
+    },
+    {
+        id: 'solgaleo', name: 'Solgaleo', types: ['Psíquico', 'Acero'],
+        hp: 137, maxHp: 137, atk: 137, def: 107, spd: 97,
+        spriteFront: 'assets/img/solgaleo-front.png', spriteBack: 'assets/img/solgaleo-back.png',
+        attacks: [
+            { name: 'Meteoimpacto', type: 'Acero', category: 'Ataque', power: 100, accuracy: 100 },
+            { name: 'Psíquico', type: 'Psíquico', category: 'Ataque', power: 90, accuracy: 100 },
+            { name: 'Cabezazo Zen', type: 'Psíquico', category: 'Ataque', power: 80, accuracy: 90 },
+            { name: 'Defensa Férrea', type: 'Acero', category: 'Defensa', power: 0, accuracy: 100 }
+        ]
     }
 ]
 
