@@ -135,12 +135,22 @@ function handleTrainerSelection(index) {
     ui.updatePokemonData(true, currentPlayer)
     ui.updatePokemonData(false, currentRival)
     ui.setBattleText('¡Entrenador ' + trainer.name + ' te desafía!')
-    
-    // Suena el grito del rival
-    setTimeout(() => ui.playCry(currentRival.name), 500);
-}
 
-// ESTA ES LA IA
+    // Escondo menús por si acaso
+    ui.elements.attackMenu.classList.add('hidden')
+    ui.elements.switchMenu.classList.add('hidden')
+
+    // Suena el grito del rival cuando aparece
+    setTimeout(() => ui.playCry(currentRival.name), 500);
+
+    // NUEVO: Después de 2 segundos, dejo que el jugador pueda elegir ataque
+    setTimeout(() => {
+        ui.elements.actionMenu.classList.remove('hidden')
+        ui.setBattleText('¿Qué hará ' + currentPlayer.name + '?')
+    }, 2000)
+    }
+
+// ESTA ES LA inteligencia del rival, elige un movimiento basado en la situación 
 function chooseRivalMove() {
     const attacks = currentRival.attacks.filter(m => m.category === 'Ataque')
     const defenses = currentRival.attacks.filter(m => m.category === 'Defensa')
